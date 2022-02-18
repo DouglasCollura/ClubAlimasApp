@@ -1,0 +1,7 @@
+{
+  "name": "Club Alimas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

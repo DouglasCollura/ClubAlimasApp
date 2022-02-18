@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "283249723041",
+    "project_id": "club-alimas",
+    "storage_bucket": "club-alimas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:283249723041:android:1149790fe13b73628c52e0",
+        "android_client_info": {
+          "package_name": "io.clubalimas.calimas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "283249723041-7g8j5occ8npbbsqb4rnjep7tlad1ruav.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDn_y3lc2LYtZXTOea5AyTsURMrnImRsLY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "283249723041-7g8j5occ8npbbsqb4rnjep7tlad1ruav.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Club Alimas</string>
+    <string name="title_activity_main">Club Alimas</string>
+    <string name="package_name">io.clubalimas.calimas</string>
+    <string name="custom_url_scheme">io.clubalimas.calimas</string>
+</resources>

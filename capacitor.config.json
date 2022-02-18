@@ -1,0 +1,6 @@
+{
+	"appId": "io.clubalimas.calimas",
+	"appName": "Club Alimas",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}
