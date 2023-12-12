@@ -292,6 +292,14 @@
 
 
 		//===================FUNCIONES=====================================================
+			async UpdateToken(){
+				const params ={
+					dni: this.usuario.dni,
+					token: sessionStorage.getItem('token')
+				}
+				await axios.post(process.env.VUE_APP_API+'UpdateToken',params)
+			},
+
 			AbrirNotificaciones(){
 				this.usuario.new_notificacion = null;
 				this.$router.push('/Notificaciones');
@@ -407,7 +415,7 @@
 				this.SlideRight()
 			}, 3000);
 			this.Refresh();
-
+			this.UpdateToken();
 			$(document).ready(function() {
 				var chars = document.querySelectorAll('.chart');
 

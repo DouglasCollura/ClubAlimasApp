@@ -25,9 +25,8 @@
 
 				<div class="grid justify-items-center align-self-end" style="grid-gap: 10px;" v-show="fase == 0">
 					<p>¿No tienes e-mail? </p>
-					<button class="btn-clave-rec">Recupera tu contraseña haciendo click aquí</button>
+					<button class="btn-clave-rec" @click="GoToBrowser()" >Recupera tu contraseña haciendo click aquí</button>
 				</div><!--FIN FASE 1 -->
-
 
 				<!-- FASE 2 -->
 				<div class="grid  align-content-start" style="grid-gap: 10px;" v-show="fase == 1">
@@ -41,7 +40,6 @@
 					<button class="btn btn-secondary" @click="VerificarClave">ACEPTAR</button>
 
 				</div><!--FIN FASE 2 -->
-
 
 				<!-- FASE 3 -->
 				<div class="grid  align-content-start" style="grid-gap: 10px;" v-show="fase ==2">
@@ -69,6 +67,7 @@
 	import axios from 'axios';
 	//import $ from 'jquery';
 	import { IonImg } from '@ionic/vue';
+	import { Browser } from '@capacitor/browser';
 
 	export default{
 
@@ -185,7 +184,13 @@
 
 					});
 				}
-			}
+			},
+
+			GoToBrowser(texto){
+
+				Browser.open({ url: 'https://api.whatsapp.com/send?phone=51991894154' });
+
+			},
 
 		}
 

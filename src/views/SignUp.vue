@@ -43,8 +43,8 @@
 					<input type="text" placeholder="Nombre del negocio/ Persona" v-model="usuario.nombre_negocio">
 					<input type="text" placeholder="Nombre de contacto" @keydown="SoloLetras($event)" v-model="usuario.nombre_contacto">
 					<input type="text" placeholder="Correo electrónico" v-model="usuario.correo">
-					<input type="number" placeholder="RUC del negocio/ DNI" class="input-number" maxlength="11"  v-model="usuario.dni">
-					<input type="number" placeholder="Teléfono de contacto" class="input-number"  v-model="usuario.telefono">
+					<input type="text" placeholder="RUC del negocio/ DNI"   inputmode="numeric" pattern="[-+]?[0-9]*[.,]?[0-9]+" class="input-number" maxlength="11"  v-model="usuario.dni">
+					<input type="text" placeholder="Teléfono de contacto" inputmode="numeric" pattern="[-+]?[0-9]*[.,]?[0-9]+" class="input-number"  v-model="usuario.telefono">
 					<input type="password" placeholder="Contraseña" v-model="usuario.clave">
 					<input type="password" placeholder="Repetir contraseña" v-model="clave_rep">	
 				</div>

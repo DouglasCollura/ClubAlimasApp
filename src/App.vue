@@ -23,6 +23,7 @@ export default defineComponent({
 
     PushNotifications.addListener("registration",(token)=>{
         this.token = token.value;
+        sessionStorage.removeItem('token');
 		sessionStorage.setItem('token', this.token);
     });
 

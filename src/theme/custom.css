@@ -65,6 +65,7 @@ input{
     height: max-content;
     padding: 15px;
     color: var(--gris-text) !important;
+    background-color: #FFF6F0;
     border-radius: 10px;
     border: none;
     outline: none;
@@ -477,6 +478,7 @@ textarea{
 .body-card-notif{
     font-weight: 300;
     line-height: 25px;
+    word-break: break-word;
 }
 
 .btn-enviar{
