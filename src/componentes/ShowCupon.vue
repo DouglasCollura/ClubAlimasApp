@@ -16,7 +16,7 @@
 
         <div class="card-cupon-valor" style="justify-self: stretch;">
             <h2 v-if="cupon.descuento != null" class="text-green align-self-end font-400">Descuento: {{cupon.descuento}}%</h2>
-			<h2 v-else class="text-green align-self-end font-400">Precio: S/. {{cupon.precio}} </h2>
+			<h2 v-else class="text-green align-self-end font-400">Precio: S/. {{numeroFormateado(cupon.precio, 2)}} </h2>
         </div>
 
 
@@ -50,6 +50,7 @@
 <script>
 //import axios from 'axios';
 import vueQr from 'vue-qr/src/packages/vue-qr.vue'
+import { decimalNumberMixin } from "../mixins/decimalNumberMixin";
 export default {
     
     components: {vueQr},
@@ -74,7 +75,7 @@ export default {
     created () {
         console.log(this.cupon);
     },
-
+    mixins:[decimalNumberMixin],
     methods: {
 
 

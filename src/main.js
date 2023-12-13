@@ -34,6 +34,8 @@ import './theme/chart.css';
 import Base from './views/Layouts/Base.vue';
 import store from './store'
 
+
+
 const app = createApp(App).use(store)
   .use(IonicVue)
   .use(TextareaAutosize)
