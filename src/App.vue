@@ -8,6 +8,9 @@
 import { IonApp, IonRouterOutlet } from '@ionic/vue';
 import { defineComponent } from 'vue';
 import {PushNotifications} from "@capacitor/push-notifications";
+
+
+
 export default defineComponent({
   name: 'App',
   components: {
@@ -20,6 +23,7 @@ export default defineComponent({
       }
   },
   mounted(){
+		sessionStorage.setItem('token', 'asdasd');
 
     PushNotifications.addListener("registration",(token)=>{
         this.token = token.value;
