@@ -31,13 +31,13 @@
 							<p> {{cupon.tipo_negocio}} </p>
 
 							<h2 v-if="cupon.descuento != null" class="text-green align-self-end font-400">Descuento {{cupon.descuento}}%</h2>
-							<h2 v-else class="text-green align-self-end font-400">Precio: S/. {{cupon.precio}} </h2>
+							<h2 v-else class="text-green align-self-end font-400">Precio: S/. {{numeroFormateado(cupon.precio, 2)}} </h2>
 
 						</div>
 
 
 						<div class="text-center">
-							<h3> {{cupon.puntos}} </h3>
+							<h3> {{numeroFormateado(cupon.puntos)}} </h3>
 							<p>puntos</p>
 						</div>
 
@@ -74,7 +74,7 @@
 
 
 						<div class="text-center">
-							<h3> {{cupon.puntos}} </h3>
+							<h3> {{numeroFormateado(cupon.puntos)}} </h3>
 							<p>puntos</p>
 						</div>
 
@@ -97,6 +97,7 @@
 	import $ from 'jquery';
 	import ShowCupon from '@/componentes/ShowCupon.vue';
 	//import EasyPieChart from "easy-pie-chart";
+import {decimalNumberMixin} from '../mixins/decimalNumberMixin'
 
 	export default{
 
@@ -110,6 +111,7 @@
 			this.CargarCuponDisponible();
 			this.CargarCuponUtilizado();
 		},
+		mixins:[decimalNumberMixin],
 		data(){
 			return{
 				//CARGA
