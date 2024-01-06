@@ -23,7 +23,7 @@ export default defineComponent({
       }
   },
   mounted(){
-		sessionStorage.setItem('token', 'asdasd');
+		// sessionStorage.setItem('token', 'asdasd');
 
     PushNotifications.addListener("registration",(token)=>{
         this.token = token.value;

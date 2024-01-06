@@ -103,6 +103,7 @@ textarea{
   color: var(--verde);
 }
 .text-orange{color: var(--naranja) !important; }
+.text-orange-light{color: var(--naranja-claro) !important; }
 
 .back-button{
     font-size: 30px;
@@ -696,3 +697,25 @@ textarea{
       transform: rotate(360deg);
     }
 }
+ion-checkbox {
+    --border-color-checked:#C04F00;
+    --checkbox-background-checked: #C04F00; /* Verde */
+}
+.content-terms{
+    margin: 10px 0px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+ 
+}
+.text-terms{
+    color: #afe1ff  !important;
+    font-weight: 600;
+}
+ion-checkbox::part(container) {
+    border-radius: 6px;
+    
+  }
+  ion-checkbox *{
+    margin-inline: 2px !important;
+  }

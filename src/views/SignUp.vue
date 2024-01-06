@@ -50,7 +50,10 @@
 				</div>
 
 				<div class="grid justify-items-center">
-					
+					<div class="content-terms">
+					<ion-checkbox label-placement="end"  v-model="checkTerms" >Acepto los  </ion-checkbox>
+					<span @click="GoToTerms()" class="text-terms" >Términos y Condiciones</span>
+					</div>
 					<button class="btn btn-secondary" @click="CrearCuenta()">CREAR CUENTA</button>
 
 					<div >
@@ -71,14 +74,15 @@
 <script>
 	import axios from 'axios';
 	import { IonImg} from '@ionic/vue';
-    import grl from '@/script/general';
-
+  import grl from '@/script/general';
+ 	import { IonCheckbox } from '@ionic/vue';
 	import $ from 'jquery';
 
 	export default {
 
 		components: {
 			IonImg,
+			IonCheckbox
 		},
 
 		created(){
@@ -95,6 +99,7 @@
 					clave:null				
 				},
 				//VAR DE CONTROL
+				checkTerms:false,
 				clave_rep:null,
 				router:null,
 				fase:0,
@@ -110,6 +115,15 @@
 				
 				if(await !this.VerificarUsuario(this.usuario)){
 					return 0;
+				}
+
+				if(!this.checkTerms){
+					this.$swal.fire({
+							icon:'error',
+							title:'Debe aceptar los Términos y Condiciones',
+							width:400
+						});
+					return 0
 				}
 
 				if(this.usuario.clave != this.clave_rep){
@@ -169,6 +183,9 @@
 			},
 
 			//FUNCIONES DE CONTROL
+			GoToTerms:()=>{
+				window.open('https://alimasperu.com/privacy', '_blank');
+			},
 
 			Vacio:function(datas){
 				for (const [key, value] of Object.entries(datas)) {

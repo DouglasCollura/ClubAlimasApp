@@ -16,7 +16,6 @@ dependencies {
     implementation project(':capacitor-keyboard')
     implementation project(':capacitor-push-notifications')
     implementation project(':capacitor-status-bar')
-    androidTestImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
 
 }
 
